@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &156412283 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8258906609004691508, guid: a38bd50f126dca2408bd4eb34e22994e, type: 3}
+  m_PrefabInstance: {fileID: 6043732779571459825}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &200783952
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,6 +136,7 @@ GameObject:
   - component: {fileID: 200783956}
   - component: {fileID: 200783955}
   - component: {fileID: 200783954}
+  - component: {fileID: 200783957}
   m_Layer: 5
   m_Name: Unit 1 Button
   m_TagString: Untagged
@@ -201,7 +207,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 200783955}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 200783957}
+        m_TargetAssemblyTypeName: SpawnPlayerUnit, Assembly-CSharp
+        m_MethodName: Spawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &200783955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,6 +258,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 200783952}
   m_CullTransparentMesh: 1
+--- !u!114 &200783957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200783952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f4d8b8a65413341a468d74bb1ddb2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitToSpawn: {fileID: 5908702946376896978, guid: 5931b883e4948ba4a974b9c58fa8e1fc, type: 3}
+  unitSpawnPoint: {fileID: 156412283}
 --- !u!1 &213929529
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,6 +408,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &413210269 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8715443114855232563, guid: dbd1cf21f328e2446bc2da12793a3a0a, type: 3}
+  m_PrefabInstance: {fileID: 3019412248450111691}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &659563405
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,7 +470,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Unit 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -527,7 +564,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &739169223
 Transform:
   m_ObjectHideFlags: 0
@@ -567,7 +604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7782624094422026917, guid: 94cd092eb7e94a44baa24b0ad1d1d751, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.22
+      value: -1.7800002
       objectReference: {fileID: 0}
     - target: {fileID: 7782624094422026917, guid: 94cd092eb7e94a44baa24b0ad1d1d751, type: 3}
       propertyPath: m_LocalPosition.z
@@ -620,11 +657,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5138054622807333959, guid: 5931b883e4948ba4a974b9c58fa8e1fc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 5138054622807333959, guid: 5931b883e4948ba4a974b9c58fa8e1fc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.22
+      value: -1.7800002
       objectReference: {fileID: 0}
     - target: {fileID: 5138054622807333959, guid: 5931b883e4948ba4a974b9c58fa8e1fc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -911,7 +948,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1722979826413965427, guid: dbd1cf21f328e2446bc2da12793a3a0a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 1722979826413965427, guid: dbd1cf21f328e2446bc2da12793a3a0a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -945,6 +982,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3424581788434904240, guid: dbd1cf21f328e2446bc2da12793a3a0a, type: 3}
+      propertyPath: maxCooldown
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3424581788434904240, guid: dbd1cf21f328e2446bc2da12793a3a0a, type: 3}
+      propertyPath: spawnCooldown
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3424581788434904240, guid: dbd1cf21f328e2446bc2da12793a3a0a, type: 3}
+      propertyPath: enemySpawnPoint
+      value: 
+      objectReference: {fileID: 413210269}
+    - target: {fileID: 3424581788434904240, guid: dbd1cf21f328e2446bc2da12793a3a0a, type: 3}
+      propertyPath: enemies.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3424581788434904240, guid: dbd1cf21f328e2446bc2da12793a3a0a, type: 3}
+      propertyPath: 'enemies.Array.data[0]'
+      value: 
+      objectReference: {fileID: 4467184907383713126, guid: 94cd092eb7e94a44baa24b0ad1d1d751, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1031,7 +1088,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 710946906214891397, guid: a38bd50f126dca2408bd4eb34e22994e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 710946906214891397, guid: a38bd50f126dca2408bd4eb34e22994e, type: 3}
       propertyPath: m_LocalPosition.z
