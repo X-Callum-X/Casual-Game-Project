@@ -1,12 +1,10 @@
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class SpawnEnemy : MonoBehaviour
 {
     public GameObject[] enemies;
     public GameObject enemySpawnPoint;
-    public float spawnCooldown = 5f;
-    public float maxCooldown = 5f;
+    public float spawnCooldown, maxCooldown = 5f;
 
     private void Update()
     {
