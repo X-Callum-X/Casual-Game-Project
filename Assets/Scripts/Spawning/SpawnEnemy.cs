@@ -9,7 +9,6 @@ public class SpawnEnemy : MonoBehaviour
     private void Update()
     {
         spawnCooldown -= Time.deltaTime;
-        Debug.Log(spawnCooldown);
 
         if (spawnCooldown <= 0)
         {

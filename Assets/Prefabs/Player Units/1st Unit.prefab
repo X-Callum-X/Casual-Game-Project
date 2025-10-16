@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1383968464495209707}
   - component: {fileID: 5048631695965612886}
   - component: {fileID: 8880551894680445874}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: 1st Unit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,6 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  maxSpeed: 1
   damage: 2
   attackRate: 1
   attackRange: 0.5
@@ -111,7 +112,10 @@ MonoBehaviour:
   attackPos: {fileID: 6136330010313012051}
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 128
+  baseLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!61 &5048631695965612886
 BoxCollider2D:
   m_ObjectHideFlags: 0
