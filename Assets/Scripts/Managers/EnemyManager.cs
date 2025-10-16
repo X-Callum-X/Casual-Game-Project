@@ -1,18 +1,21 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemyManager : MonoBehaviour 
 {
     public int speed;
+    public int maxSpeed;
     public int damage;
     public int attackRate;
     public float attackRange;
     public int health = 10;
 
-    private float timeBetweenAttacks;
-    private float maxTimeBetweenAttacks;
+    private float attackTimer;
+    private float resetAttackTimer;
 
     public Transform attackPos;
     public LayerMask playerUnitLayer;
+    public LayerMask baseLayer;
 
     private void FixedUpdate()
     {
@@ -24,24 +27,48 @@ public class EnemyManager : MonoBehaviour
 
     private void Update()
     {
-        if (timeBetweenAttacks >= attackRate)
+        attackTimer += Time.deltaTime;
+
+        Collider2D[] playerUnitToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, playerUnitLayer);
+        Collider2D[] baseToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, baseLayer);
+
+        for (int i = 0; i < playerUnitToDamage.Length; i++)
         {
-            Collider2D[] playerUnitToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, playerUnitLayer);
-            for (int i = 0; i < playerUnitToDamage.Length; i++)
+            StopAllCoroutines();
+            StartCoroutine(StopToAttack());
+
+            if (attackTimer >= attackRate)
             {
                 playerUnitToDamage[i].GetComponent<PlayerManager>().health -= damage;
+
+                attackTimer = resetAttackTimer;
             }
-            timeBetweenAttacks = maxTimeBetweenAttacks;
         }
-        else
+
+        for (int i = 0; i < baseToDamage.Length; i++)
         {
-            timeBetweenAttacks += Time.deltaTime;
+            StopAllCoroutines();
+            StartCoroutine(StopToAttack());
+
+            if (attackTimer >= attackRate)
+            {
+                baseToDamage[i].GetComponent<BaseManager>().baseHealth -= damage;
+
+                attackTimer = resetAttackTimer;
+            }
         }
 
         if (health <= 0)
         {
             Destroy(this.gameObject);
         }
+    }
+
+    private IEnumerator StopToAttack()
+    {
+        speed = 0;
+        yield return new WaitForSeconds(attackRate);
+        speed = maxSpeed;
     }
 
     public void OnDrawGizmosSelected()

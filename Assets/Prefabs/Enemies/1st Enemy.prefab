@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 7222595366648416031}
   - component: {fileID: 8160900719060924}
   - component: {fileID: 7215105759235193965}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: 1st Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,6 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  maxSpeed: 1
   damage: 1
   attackRate: 1
   attackRange: 0.5
@@ -142,7 +143,10 @@ MonoBehaviour:
   attackPos: {fileID: 2941791085419389717}
   playerUnitLayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 64
+  baseLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!61 &8160900719060924
 BoxCollider2D:
   m_ObjectHideFlags: 0

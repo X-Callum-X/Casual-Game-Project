@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Player Unit
   - Enemy
+  - Enemy Base
+  - Player Base
   layers:
   - Default
   - TransparentFX
@@ -13,10 +15,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Player Unit
+  - Enemy
+  - Player Base
+  - Enemy Base
   - 
   - 
   - 
