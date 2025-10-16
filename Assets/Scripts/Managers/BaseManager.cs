@@ -6,20 +6,22 @@ public class BaseManager : MonoBehaviour
 
     public GameObject youWinScreen;
     public GameObject youLoseScreen;
+    public GameObject LevelUI;
 
     private void Update()
     {
         if (baseHealth <= 0)
         {
             baseHealth = 0;
+            LevelUI.SetActive(false);
 
-            if (this.gameObject.CompareTag("Enemy Base"))
-            {
-                youLoseScreen.SetActive(true);
-            }
-            else if (this.gameObject.CompareTag("Player Base"))
+            if (this.gameObject.CompareTag("Enemy"))
             {
                 youWinScreen.SetActive(true);
+            }
+            else if (this.gameObject.CompareTag("Player Unit"))
+            {
+                youLoseScreen.SetActive(true);
             }
         }
     }

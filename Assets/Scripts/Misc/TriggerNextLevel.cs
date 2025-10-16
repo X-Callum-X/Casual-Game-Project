@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class TriggerNextLevel : MonoBehaviour
 {
-    public int nextLevel;
+    private int nextLevel;
 
     private void Start()
     {
@@ -17,8 +17,6 @@ public class TriggerNextLevel : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(nextLevel);
-
             if (nextLevel > PlayerPrefs.GetInt("levelAt"))
             {
                 PlayerPrefs.SetInt("levelAt", nextLevel);

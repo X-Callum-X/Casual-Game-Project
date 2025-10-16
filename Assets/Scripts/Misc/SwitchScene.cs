@@ -5,9 +5,14 @@ public class SwitchScene : MonoBehaviour
 {
     private string sceneName;
 
-    public void LoadScene(string sceneName)
+    public void LoadNextScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void QuitGame()

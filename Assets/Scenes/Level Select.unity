@@ -205,7 +205,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 142890070}
         m_TargetAssemblyTypeName: SwitchScene, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_MethodName: LoadNextScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -351,7 +351,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 223020739}
         m_TargetAssemblyTypeName: SwitchScene, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_MethodName: LoadNextScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -955,7 +955,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1084023643}
         m_TargetAssemblyTypeName: SwitchScene, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_MethodName: LoadNextScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1101,7 +1101,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1240128005}
         m_TargetAssemblyTypeName: SwitchScene, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_MethodName: LoadNextScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1490,7 +1490,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1549258802}
         m_TargetAssemblyTypeName: SwitchScene, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_MethodName: LoadNextScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
