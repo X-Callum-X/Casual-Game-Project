@@ -3,10 +3,12 @@ using UnityEngine;
 public class BaseManager : MonoBehaviour
 {
     public float baseHealth = 10;
+    public float maxBaseHealth = 10;
 
     public GameObject youWinScreen;
     public GameObject youLoseScreen;
     public GameObject LevelUI;
+
 
     private void Update()
     {
