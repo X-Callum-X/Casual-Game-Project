@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour 
 {
-    public int speed;
-    public int maxSpeed;
-    public int damage;
-    public int attackRate;
+    public float speed;
+    public float maxSpeed;
+    public float damage;
+    public float attackRate;
     public float attackRange;
-    public int health = 10;
+    public float health = 10;
 
     private float attackTimer;
     private float resetAttackTimer;
