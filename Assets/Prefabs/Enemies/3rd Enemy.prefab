@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 8160900719060924}
   - component: {fileID: 7215105759235193965}
   m_Layer: 7
-  m_Name: 1st Enemy
+  m_Name: 3rd Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,12 +135,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8538ca751dcf9c141a0295a4b34b8fbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   maxSpeed: 1
-  damage: 5
-  attackRate: 1.5
+  damage: 2
+  attackRate: 0.3
   attackRange: 0.5
-  health: 20
+  health: 10
   attackPos: {fileID: 2941791085419389717}
   playerUnitLayer:
     serializedVersion: 2

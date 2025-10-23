@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BaseManager : MonoBehaviour
 {
-    public int baseHealth = 10;
+    public float baseHealth = 10;
 
     public GameObject youWinScreen;
     public GameObject youLoseScreen;
