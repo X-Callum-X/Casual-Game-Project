@@ -2723,7 +2723,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 818ca21ddca64804188daf8ebbe137a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: 3
 --- !u!1 &1681474601
 GameObject:
   m_ObjectHideFlags: 0
@@ -3829,6 +3828,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1804074299}
     - target: {fileID: 1030806630846532880, guid: dbd1cf21f328e2446bc2da12793a3a0a, type: 3}
+      propertyPath: baseHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030806630846532880, guid: dbd1cf21f328e2446bc2da12793a3a0a, type: 3}
       propertyPath: youWinScreen
       value: 
       objectReference: {fileID: 1925126455}
@@ -4050,8 +4053,8 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1479482003}
   - {fileID: 2046716251}
+  - {fileID: 213929530}
   - {fileID: 239491859}
   - {fileID: 2007420074}
-  - {fileID: 213929530}
-  - {fileID: 1479482003}

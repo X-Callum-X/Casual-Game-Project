@@ -176,9 +176,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b6bcc65805b0874e9a4b7af9fa37743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseHealth: 10
+  baseHealth: 100
   youWinScreen: {fileID: 0}
   youLoseScreen: {fileID: 0}
+  LevelUI: {fileID: 0}
 --- !u!1 &8258906609004691508
 GameObject:
   m_ObjectHideFlags: 0

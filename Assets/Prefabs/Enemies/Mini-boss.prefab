@@ -61,7 +61,7 @@ Transform:
   m_GameObject: {fileID: 4467184907383713126}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 642.65753, y: 359.61646, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -135,12 +135,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8538ca751dcf9c141a0295a4b34b8fbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.25
-  maxSpeed: 1
-  damage: 50
-  attackRate: 10
-  attackRange: 4
-  health: 250
+  speed: 0.2
+  maxSpeed: 0.2
+  damage: 100
+  attackRate: 2
+  attackRange: 6
+  health: 1000
   attackPos: {fileID: 2941791085419389717}
   playerUnitLayer:
     serializedVersion: 2
