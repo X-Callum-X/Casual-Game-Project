@@ -6,6 +6,7 @@ public class HealthbarController : MonoBehaviour
     public Slider slider;
     public void SetHealth(float health, float maxHealth)
     {
+        slider.gameObject.SetActive(health < maxHealth);
         slider.value = health / maxHealth;
     }
 }
