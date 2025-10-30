@@ -418,9 +418,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.2
   maxSpeed: 0.2
-  damage: 100
-  attackRate: 1.5
-  attackRange: 5
+  damage: 3
+  attackRate: 0.1
+  attackRange: 3.5
   health: 1000
   maxHealth: 1000
   currencyOnDeath: 2000
