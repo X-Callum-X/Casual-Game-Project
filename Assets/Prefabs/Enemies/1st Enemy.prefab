@@ -325,7 +325,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 4801227835787818748, guid: 58a124e7a176e3a40a07fb2c43f257ef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -351,11 +351,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   maxSpeed: 1
-  damage: 5
+  damage: 2
   attackRate: 1.5
   attackRange: 0.5
-  health: 20
-  maxHealth: 20
+  health: 10
+  maxHealth: 10
+  currencyOnDeath: 10
   attackPos: {fileID: 2941791085419389717}
   playerUnitLayer:
     serializedVersion: 2
@@ -363,7 +364,6 @@ MonoBehaviour:
   baseLayer:
     serializedVersion: 2
     m_Bits: 256
-  healthbarController: {fileID: 0}
 --- !u!114 &9162655652196276049
 MonoBehaviour:
   m_ObjectHideFlags: 0

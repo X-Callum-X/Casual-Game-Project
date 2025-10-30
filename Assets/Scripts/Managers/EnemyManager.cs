@@ -11,6 +11,7 @@ public class EnemyManager : MonoBehaviour
     public float attackRange;
     public float health = 10;
     public float maxHealth = 10;
+    public int currencyOnDeath = 0;
 
     private float attackTimer;
     private float resetAttackTimer;
@@ -19,11 +20,13 @@ public class EnemyManager : MonoBehaviour
     public Transform attackPos;
     public LayerMask playerUnitLayer;
     public LayerMask baseLayer;
-    [SerializeField] private HealthbarController healthbarController;
+    private HealthbarController healthbarController;
+    private InLevelCurrency currency;
 
     private void Start()
     {
         healthbarController = GetComponentInChildren<HealthbarController>();
+        currency = FindFirstObjectByType<InLevelCurrency>();
     }
 
     private void FixedUpdate()
@@ -70,6 +73,7 @@ public class EnemyManager : MonoBehaviour
 
         if (health <= 0)
         {
+            currency.currentCurrency += currencyOnDeath;
             Destroy(this.gameObject);
         }
     }

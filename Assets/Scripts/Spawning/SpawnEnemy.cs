@@ -4,6 +4,7 @@ public class SpawnEnemy : MonoBehaviour
 {
     public GameObject[] enemies;
     public GameObject enemySpawnPoint;
+    public float spawnOffset;
     public float spawnCooldown, maxCooldown = 5f;
 
     private void Update()

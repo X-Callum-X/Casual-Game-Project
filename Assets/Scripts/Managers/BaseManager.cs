@@ -8,10 +8,17 @@ public class BaseManager : MonoBehaviour
     public GameObject youWinScreen;
     public GameObject youLoseScreen;
     public GameObject LevelUI;
+    private HealthbarController healthbarController;
 
+    private void Start()
+    {
+        healthbarController = GetComponentInChildren<HealthbarController>();
+    }
 
     private void Update()
     {
+        healthbarController.SetHealth(baseHealth, maxBaseHealth);
+
         if (baseHealth <= 0)
         {
             baseHealth = 0;
