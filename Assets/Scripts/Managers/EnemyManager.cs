@@ -3,19 +3,28 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour 
 {
+    [Header("Variables")]
     public float speed;
     public float maxSpeed;
     public float damage;
     public float attackRate;
     public float attackRange;
     public float health = 10;
+    public float maxHealth = 10;
 
     private float attackTimer;
     private float resetAttackTimer;
 
+    [Header("References")]
     public Transform attackPos;
     public LayerMask playerUnitLayer;
     public LayerMask baseLayer;
+    [SerializeField] private HealthbarController healthbarController;
+
+    private void Start()
+    {
+        healthbarController = GetComponentInChildren<HealthbarController>();
+    }
 
     private void FixedUpdate()
     {
@@ -27,6 +36,7 @@ public class EnemyManager : MonoBehaviour
 
     private void Update()
     {
+        healthbarController.SetHealth(health, maxHealth);
         attackTimer += Time.deltaTime;
 
         Collider2D[] playerUnitToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, playerUnitLayer);
