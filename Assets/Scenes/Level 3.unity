@@ -796,11 +796,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3424581788434904240, guid: dbd1cf21f328e2446bc2da12793a3a0a, type: 3}
       propertyPath: maxCooldown
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3424581788434904240, guid: dbd1cf21f328e2446bc2da12793a3a0a, type: 3}
       propertyPath: spawnCooldown
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3424581788434904240, guid: dbd1cf21f328e2446bc2da12793a3a0a, type: 3}
       propertyPath: enemySpawnPoint
