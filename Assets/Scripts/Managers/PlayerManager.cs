@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Diagnostics.Contracts;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
@@ -9,6 +10,7 @@ public class PlayerManager : MonoBehaviour
     public float attackRate;
     public float attackRange;
     public float health = 10;
+    public float maxHealth = 10;
 
     private float timeBetweenAttacks;
     private float maxTimeBetweenAttacks;
@@ -16,6 +18,12 @@ public class PlayerManager : MonoBehaviour
     public Transform attackPos;
     public LayerMask enemyLayer;
     public LayerMask baseLayer;
+    private HealthbarController healthbarController;
+
+    private void Start()
+    {
+        healthbarController = GetComponentInChildren<HealthbarController>();
+    }
 
     private void FixedUpdate()
     {
@@ -27,6 +35,7 @@ public class PlayerManager : MonoBehaviour
 
     private void Update()
     {
+        healthbarController.SetHealth(health, maxHealth);
         timeBetweenAttacks += Time.deltaTime;
 
         Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemyLayer);

@@ -7,11 +7,13 @@ public class SwitchScene : MonoBehaviour
 
     public void LoadNextScene(string sceneName)
     {
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene(sceneName);
     }
 
     public void ReloadScene()
     {
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
