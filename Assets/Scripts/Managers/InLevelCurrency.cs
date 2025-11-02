@@ -20,6 +20,8 @@ public class InLevelCurrency : MonoBehaviour
 
     private void Update()
     {
+        currCurrencyText.text = currentCurrency.ToString() + "/";
+
         realIncrementRate = 1 / incrementRate;
 
         if (!CooldownActive && currentCurrency < maxCurrency)
@@ -38,38 +40,6 @@ public class InLevelCurrency : MonoBehaviour
         CooldownActive = true;
         yield return new WaitForSeconds(realIncrementRate);
         currentCurrency += 1;
-        currCurrencyText.text = (currentCurrency.ToString() + "/");
         CooldownActive = false;
     }
-
-    //public TextMeshProUGUI currCurrencyText;
-    //public TextMeshProUGUI maxCurrencyText;
-
-    //public int currentCurrency;
-    //public int maxCurrency;
-    //public float increaseRate;
-    //public float increaseTimer;
-
-    //private void Update()
-    //{
-    //    increaseTimer += Time.deltaTime;
-
-    //    currCurrencyText.text = currentCurrency.ToString() + "/";
-    //    maxCurrencyText.text = maxCurrency.ToString();
-
-    //    if (increaseTimer >= increaseRate)
-    //    {
-    //        if (increaseTimer > 0.1)
-    //        {
-    //            increaseTimer = 0;
-    //            currentCurrency += 1;
-
-    //            if (currentCurrency > maxCurrency)
-    //            {
-    //                currentCurrency = maxCurrency;
-    //            }
-    //        }
-    //    }
-    //}
-
 }

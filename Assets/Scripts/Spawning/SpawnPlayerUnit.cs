@@ -1,9 +1,12 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SpawnPlayerUnit : MonoBehaviour
 {
+    public TMP_Text unitPriceText;
+    public Slider cooldownSlider;
     public Button unitButton;
     public GameObject unitToSpawn;
     public GameObject unitSpawnPoint;
@@ -18,10 +21,13 @@ public class SpawnPlayerUnit : MonoBehaviour
     private void Start()
     {
         currency = FindAnyObjectByType<InLevelCurrency>();
+        cooldownSlider.gameObject.SetActive(false);
     }
 
     private void Update()
     {
+        cooldownSlider.value = cooldownTimer;
+
         if (isRecharging)
         {
             cooldownTimer += Time.deltaTime;
@@ -31,6 +37,8 @@ public class SpawnPlayerUnit : MonoBehaviour
                 unitButton.interactable = true;
                 isRecharging = false;
                 cooldownTimer = 0;
+                unitPriceText.gameObject.SetActive(true);
+                cooldownSlider.gameObject.SetActive(false);
             }
         }
     }
@@ -43,6 +51,8 @@ public class SpawnPlayerUnit : MonoBehaviour
             currency.currentCurrency -= unitValue;
             isRecharging = true;
             unitButton.interactable = false;
+            unitPriceText.gameObject.SetActive(false);
+            cooldownSlider.gameObject.SetActive(true);
         }
         else
         {
