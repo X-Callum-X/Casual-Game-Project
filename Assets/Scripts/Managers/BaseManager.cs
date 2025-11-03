@@ -9,10 +9,12 @@ public class BaseManager : MonoBehaviour
     public GameObject youLoseScreen;
     public GameObject LevelUI;
     private HealthbarController healthbarController;
+    private SpawnEnemy spawnEnemy;
 
     private void Start()
     {
         healthbarController = GetComponentInChildren<HealthbarController>();
+        spawnEnemy = GetComponent<SpawnEnemy>();
     }
 
     private void Update()
@@ -23,6 +25,7 @@ public class BaseManager : MonoBehaviour
         {
             baseHealth = 0;
             LevelUI.SetActive(false);
+            spawnEnemy.enabled = false;
 
             if (this.gameObject.CompareTag("Enemy"))
             {
