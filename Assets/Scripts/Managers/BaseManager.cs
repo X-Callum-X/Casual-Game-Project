@@ -25,11 +25,11 @@ public class BaseManager : MonoBehaviour
         {
             baseHealth = 0;
             LevelUI.SetActive(false);
-            spawnEnemy.enabled = false;
 
             if (this.gameObject.CompareTag("Enemy"))
             {
                 youWinScreen.SetActive(true);
+                spawnEnemy.enabled = false;
             }
             else if (this.gameObject.CompareTag("Player Unit"))
             {
