@@ -2171,7 +2171,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.7868423
+  orthographic size: 3.9230769
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3168,7 +3168,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1104733732}
         m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
         m_MethodName: TogglePause
         m_Mode: 1
